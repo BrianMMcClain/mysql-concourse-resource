@@ -11,6 +11,9 @@
 #   "version": { "id": 1423 }
 # }
 
+
+STDERR.puts "CHECK SCRIPT"
+
 require 'mysql2'
 require 'json'
 
@@ -34,7 +37,7 @@ client = Mysql2::Client.new(:host => host, :username => user, :password => passw
 
 # Build the result and send to STDOUT
 ret = []
-results = client.query("SELECT * FROM concourseresource WHERE id > #{previous_version};")
+results = client.query("SELECT id FROM concourseresource WHERE id > #{previous_version};")
 results.each do |r|
     ret << { "id": "#{r["id"]}"}
 end
