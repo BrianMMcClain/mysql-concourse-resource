@@ -39,4 +39,5 @@ results.each do |r|
     ret << { "id": "#{r["id"]}"}
 end
 
+# Return the expected JSON to STDOUT
 puts ret.to_json
