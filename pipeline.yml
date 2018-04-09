@@ -32,5 +32,6 @@ jobs:
         args: ["./my-mysql/concourse-mysql-resource.XXXXXX"]
   - put: my-mysql
     params:
+      sql_path: ./my-mysql/concourse-mysql-resource.XXXXXX
       column: processed
       value: true
