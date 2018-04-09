@@ -11,9 +11,6 @@
 #   "version": { "id": 1423 }
 # }
 
-
-STDERR.puts "CHECK SCRIPT"
-
 require 'mysql2'
 require 'json'
 
