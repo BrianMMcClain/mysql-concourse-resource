@@ -7,7 +7,7 @@ COPY in.rb /opt/resource/in
 COPY out.rb /opt/resource/out
 COPY Gemfile /opt/resource/Gemfile
 
-RUN chmod +x /opt/resource/check /opt/resource/in /opt/resource/in
+RUN chmod +x /opt/resource/check /opt/resource/in /opt/resource/out
 
 WORKDIR /opt/resource
 RUN bundle install
